@@ -10,6 +10,7 @@ import { MoviesComponent } from './MainComponets/movies/movies.component';
 import { TvShowsComponent } from './MainComponets/tv-shows/tv-shows.component';
 import { PeopleComponent } from './MainComponets/people/people.component';
 import { LoginComponent } from './Credientials/login/login.component';
+import { RegisterComponent } from './Credientials/register/register.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { LoginComponent } from './Credientials/login/login.component';
     MoviesComponent,
     TvShowsComponent,
     PeopleComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
