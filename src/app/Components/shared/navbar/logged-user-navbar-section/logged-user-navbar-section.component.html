@@ -1,1 +1,13 @@
-<p>logged-user-navbar-section works!</p>
+<div class="d-flex">
+        <div class="btn-group">
+            <button type="button" class="btn  dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-bell fa-lg fw-bolder"></i>
+            </button>
+            <div class="dropdown-menu">
+                <div>
+                    <h6>Unread Notifications {{NoOfNotifications}}</h6>
+                    <p *ngIf="NoOfNotifications ==0 " class="mb-0">Good job! Looks like you're all caught up. View All</p>
+                </div>
+            </div>
+        </div>
+</div>
