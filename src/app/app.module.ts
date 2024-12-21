@@ -14,6 +14,7 @@ import { RegisterComponent } from './Components/Credientials/register/register.c
 import { NotFoundComponent } from './Components/Errors/not-found/not-found.component';
 import { CreateTVshowOrMovieComponent } from './Components/shared/navbar/create-tvshow-or-movie/create-tvshow-or-movie.component';
 import { CreateLoginOrRehisterComponerntComponent } from './Components/shared/navbar/create-login-or-rehister-componernt/create-login-or-rehister-componernt.component';
+import { LoggedUserNavbarSectionComponent } from './Components/shared/navbar/logged-user-navbar-section/logged-user-navbar-section.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { CreateLoginOrRehisterComponerntComponent } from './Components/shared/na
     NotFoundComponent,
     CreateTVshowOrMovieComponent,
     CreateLoginOrRehisterComponerntComponent,
+    LoggedUserNavbarSectionComponent,
   ],
   imports: [
     BrowserModule,
