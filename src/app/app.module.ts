@@ -3,14 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './shared/navbar/navbar.component';
-import { FooterComponent } from './shared/footer/footer.component';
-import { HomeComponent } from './MainComponets/home/home.component';
-import { MoviesComponent } from './MainComponets/movies/movies.component';
-import { TvShowsComponent } from './MainComponets/tv-shows/tv-shows.component';
-import { PeopleComponent } from './MainComponets/people/people.component';
-import { LoginComponent } from './Credientials/login/login.component';
-import { RegisterComponent } from './Credientials/register/register.component';
+import { NavbarComponent } from './Components/shared/navbar/navbar.component';
+import { FooterComponent } from './Components/shared/footer/footer.component';
+import { HomeComponent } from './Components/MainComponets/home/home.component';
+import { MoviesComponent } from './Components/MainComponets/movies/movies.component';
+import { TvShowsComponent } from './Components/MainComponets/tv-shows/tv-shows.component';
+import { PeopleComponent } from './Components/MainComponets/people/people.component';
+import { LoginComponent } from './Components/Credientials/login/login.component';
+import { RegisterComponent } from './Components/Credientials/register/register.component';
 
 @NgModule({
   declarations: [
