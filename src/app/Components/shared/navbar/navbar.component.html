@@ -28,17 +28,27 @@
           </ul>
         </li>
       </ul>
-      <form class="d-flex">
-        <div class="btn-group">
+      <div class="d-flex">
+        <div id="addNewMovieOrTVSHOW">
+             <div class="btn-group">
             <button type="button" class="btn  dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="fa-solid fa-plus fa-lg fw-bolder"></i>
             </button>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Add New Movie</a></li>
-                <li><a class="dropdown-item" href="#">Add New TV Show</a></li>
-            </ul>
+            <div class="dropdown-menu">
+                <ul  *ngIf="logged ; else PleaseLoginComp">
+                    <li><a class="dropdown-item" href="#">Add New Movie</a></li>
+                    <li><a class="dropdown-item" href="#">Add New TV Show</a></li>
+                </ul>
+                <ng-template #PleaseLoginComp class="dropdown-menu">
+                    <p>
+                        Can't find a movie or TV show? Login to create it.
+                    </p>
+                </ng-template>
+            </div>
+        
          </div>
-      </form>
+        </div>
+      </div>
     </div>
   </div>
 </nav>
