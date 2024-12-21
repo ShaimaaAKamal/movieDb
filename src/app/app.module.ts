@@ -11,6 +11,7 @@ import { TvShowsComponent } from './Components/MainComponets/tv-shows/tv-shows.c
 import { PeopleComponent } from './Components/MainComponets/people/people.component';
 import { LoginComponent } from './Components/Credientials/login/login.component';
 import { RegisterComponent } from './Components/Credientials/register/register.component';
+import { NotFoundComponent } from './Components/Errors/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { RegisterComponent } from './Components/Credientials/register/register.c
     TvShowsComponent,
     PeopleComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
