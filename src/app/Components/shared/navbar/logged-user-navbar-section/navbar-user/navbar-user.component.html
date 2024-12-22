@@ -9,14 +9,14 @@
                      <span class="fs-xs text-gray">View Profile</span>
                    </div>
                   <ul class="list-unstyled mb-0 py-2 fs-sm dropDownBroder">
-                        <li><a class="dropdown-item " [routerLink]="['/:userName/Discussions']" routerLinkActive="router-link-active">Discussions</a></li>
-                        <li><a class="dropdown-item  py-1" [routerLink]="['/:userName/Lists']" routerLinkActive="router-link-active"> Lists</a></li>
-                        <li><a class="dropdown-item " [routerLink]="['/:userName/Ratings']" routerLinkActive="router-link-active"> Ratings</a></li>
-                        <li><a class="dropdown-item " [routerLink]="['/:userName/Watchlist']" routerLinkActive="router-link-active"> Watchlist</a></li>
+                        <li><a class="dropdown-item" [routerLink]="User.name+'/Discussions'" routerLinkActive="router-link-active">Discussions</a></li>
+                        <li><a class="dropdown-item  py-1" [routerLink]="User.name+'/Lists'" routerLinkActive="router-link-active"> Lists</a></li>
+                        <li><a class="dropdown-item " [routerLink]="User.name+'/Ratings'"routerLinkActive="router-link-active"> Ratings</a></li>
+                        <li><a class="dropdown-item " [routerLink]="User.name+'/Watchlist'" routerLinkActive="router-link-active"> Watchlist</a></li>
                   </ul>  
                   <ul class="list-unstyled py-2 fs-sm dropDownBroder">
-                        <li><a class="dropdown-item " [routerLink]="['/:userName/EditProfile']" routerLinkActive="router-link-active">Edit Profile</a></li>
-                        <li><a class="dropdown-item  py-1" [routerLink]="['/:userName/Settings']" routerLinkActive="router-link-active"> Settings</a></li>
+                        <li><a class="dropdown-item " [routerLink]="User.name+'/EditProfile'"  routerLinkActive="router-link-active">Edit Profile</a></li>
+                        <li><a class="dropdown-item  py-1" [routerLink]="User.name+'/Settings'"  routerLinkActive="router-link-active"> Settings</a></li>
                   </ul> 
                   <div class="px-3" (click)="logout()" >
                      <p class="mb-0 fs-sm" >Logout</p>

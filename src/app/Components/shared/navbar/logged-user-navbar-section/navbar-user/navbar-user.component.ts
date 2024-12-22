@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './navbar-user.component.css'
 })
 export class NavbarUserComponent {
-User:any={name:"shaimaa kamal"};
+User:any={name:"shaimaaAkamal"};
 logout(){
   console.log('logout');
 }
