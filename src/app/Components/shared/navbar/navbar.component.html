@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light w-100">
+<nav class="navbar navbar-expand-lg  w-100">
   <div class="container-fluid">
     <a class="navbar-brand" [routerLink]="['/Home']" >
         <img src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg" width="100px"  alt="logo">
@@ -9,16 +9,16 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" aria-current=" Movies page" [routerLink]="['/Movies']" routerLinkActive="router-link-active">Movies</a>
+          <a class="nav-link text-white" aria-current=" Movies page" [routerLink]="['/Movies']" routerLinkActive="router-link-active">Movies</a>
         </li>
          <li class="nav-item">
-          <a class="nav-link active" aria-current=" TvShows page" [routerLink]="['/TVShows']" routerLinkActive="router-link-active">TV Shows</a>
+          <a class="nav-link active text-white" aria-current=" TvShows page" [routerLink]="['/TVShows']" routerLinkActive="router-link-active">TV Shows</a>
         </li>
          <li class="nav-item">
-          <a class="nav-link " aria-current=" People page" [routerLink]="['/People']" routerLinkActive="router-link-active">People</a>
+          <a class="nav-link text-white" aria-current=" People page" [routerLink]="['/People']" routerLinkActive="router-link-active">People</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link text-white dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             More
           </a>
           <ul class="dropdown-menu fs-sm" aria-labelledby="navbarDropdown" >
@@ -34,7 +34,9 @@
         <ng-template #profileNotification>
           <app-logged-user-navbar></app-logged-user-navbar>
         </ng-template>
-        
+        <div class="ps-2">
+             <i class="fa-solid fa-magnifying-glass fa-xl text-blue"></i>
+        </div>        
       </div>
     </div>
   </div>
