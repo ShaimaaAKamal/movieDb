@@ -15,6 +15,7 @@ import { NotFoundComponent } from './Components/Errors/not-found/not-found.compo
 import { CreateTVshowOrMovieComponent } from './Components/shared/navbar/create-tvshow-or-movie/create-tvshow-or-movie.component';
 import { CreateLoginOrRehisterComponerntComponent } from './Components/shared/navbar/create-login-or-rehister-componernt/create-login-or-rehister-componernt.component';
 import { LoggedUserNavbarSectionComponent } from './Components/shared/navbar/logged-user-navbar-section/logged-user-navbar-section.component';
+import { DiscussionComponent } from './Components/MainComponets/discussion/discussion.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { LoggedUserNavbarSectionComponent } from './Components/shared/navbar/log
     CreateTVshowOrMovieComponent,
     CreateLoginOrRehisterComponerntComponent,
     LoggedUserNavbarSectionComponent,
+    DiscussionComponent,
   ],
   imports: [
     BrowserModule,
