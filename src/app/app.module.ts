@@ -17,6 +17,7 @@ import { CreateLoginOrRehisterComponerntComponent } from './Components/shared/na
 import { LoggedUserNavbarSectionComponent } from './Components/shared/navbar/logged-user-navbar-section/logged-user-navbar-section.component';
 import { DiscussionComponent } from './Components/MainComponets/discussion/discussion.component';
 import { LeaderboardComponent } from './Components/MainComponets/leaderboard/leaderboard.component';
+import { SupportComponent } from './Components/MainComponets/support/support.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { LeaderboardComponent } from './Components/MainComponets/leaderboard/lea
     LoggedUserNavbarSectionComponent,
     DiscussionComponent,
     LeaderboardComponent,
+    SupportComponent,
   ],
   imports: [
     BrowserModule,
