@@ -18,6 +18,7 @@ import { LoggedUserNavbarSectionComponent } from './Components/shared/navbar/log
 import { DiscussionComponent } from './Components/MainComponets/discussion/discussion.component';
 import { LeaderboardComponent } from './Components/MainComponets/leaderboard/leaderboard.component';
 import { SupportComponent } from './Components/MainComponets/support/support.component';
+import { NotificationsComponent } from './Components/MainComponets/notifications/notifications.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { SupportComponent } from './Components/MainComponets/support/support.com
     DiscussionComponent,
     LeaderboardComponent,
     SupportComponent,
+    NotificationsComponent,
   ],
   imports: [
     BrowserModule,
