@@ -3,7 +3,7 @@
                 <i class="fa-solid fa-plus fa-lg fw-bolder"></i>
             </button>
             <div class="dropdown-menu">
-                <ul  *ngIf="loggedUser ; else PleaseLoginComp" class="list-unstyled mb-0 fs-xs">
+                <ul  *ngIf="loggedUser ; else PleaseLoginComp" class="list-unstyled mb-0 fs-sm">
                     <li><a class="dropdown-item" [routerLink]="['/AddNewMovie']">Add New Movie</a></li>
                     <li><a class="dropdown-item"  [routerLink]="['/AddNewShow']">Add New TV Show</a></li>
                 </ul>

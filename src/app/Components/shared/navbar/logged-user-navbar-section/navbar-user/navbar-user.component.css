@@ -1,0 +1,19 @@
+.userName{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: lighter;
+    background-color: var( --main-color);
+    border-radius: 50%;
+    color:#fff;
+    padding:.2rem 1rem .3rem;
+}
+
+#userName{
+    text-transform: capitalize;
+}
+
+.dropDownBroder{
+ border-bottom: 1px solid var(--border-color);
+}
