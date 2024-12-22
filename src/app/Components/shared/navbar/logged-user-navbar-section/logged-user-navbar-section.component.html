@@ -4,9 +4,13 @@
                 <i class="fa-solid fa-bell fa-lg fw-bolder"></i>
             </button>
             <div class="dropdown-menu">
-                <div>
-                    <h6>Unread Notifications {{NoOfNotifications}}</h6>
-                    <p *ngIf="NoOfNotifications ==0 " class="mb-0">Good job! Looks like you're all caught up. View All</p>
+                <div class="py-2 px-3">
+                    <h6 class="fs-sm">
+                        <span class="fw-bold">Unread Notifications </span>
+                        <span> {{NoOfNotifications}}</span>
+                    </h6>
+                    <p *ngIf="NoOfNotifications ==0 " class="mb-0 fs-xs">Good job! Looks like you're all caught up.</p>
+                    <a [routerLink]="['/Notification']" class="fs-xs">View All</a>
                 </div>
             </div>
         </div>
