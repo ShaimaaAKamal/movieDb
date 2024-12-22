@@ -20,6 +20,7 @@ import { LeaderboardComponent } from './Components/MainComponets/leaderboard/lea
 import { SupportComponent } from './Components/MainComponets/support/support.component';
 import { NotificationsComponent } from './Components/MainComponets/notifications/notifications.component';
 import { AddNewMovieComponent } from './Components/AddNewComponents/add-new-movie/add-new-movie.component';
+import { AddNewTVShowComponent } from './Components/AddNewComponents/add-new-tvshow/add-new-tvshow.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { AddNewMovieComponent } from './Components/AddNewComponents/add-new-movi
     SupportComponent,
     NotificationsComponent,
     AddNewMovieComponent,
+    AddNewTVShowComponent,
   ],
   imports: [
     BrowserModule,
