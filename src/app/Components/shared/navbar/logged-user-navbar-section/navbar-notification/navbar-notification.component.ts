@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-navbar-notification',
@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './navbar-notification.component.css'
 })
 export class NavbarNotificationComponent {
-
+@Input()   NoOfNotifications:Number=0;
 }
