@@ -1,10 +1,16 @@
+:root{
+  --main-color:#7F5CE7;
+  --main-gray:#7F7F7F;
+  --border-color:#DEDEDF;
+  --main-blue:#06B4E4;
+  --bg-dark:#032541;
+}
 html{
     font-size:16px;
 }
 body {
   font-family: 'Source Sans Pro', "Roboto", sans-serif
 }
-
 .parent-container{
      width:90%;
    }
@@ -26,7 +32,22 @@ body {
   /* width:  ; */
     /* --bs-dropdown-min-width: ; */
   }
- 
+
+ .text-gray{
+  color:var(--main-gray);
+ }
+ .text-blue{
+  color:var(--main-blue);
+ }
+ .text-white{
+  color:#fff;
+ }
+ .bg-siteDark{
+  background-color: var(--bg-dark);
+ }
+ .fs-xxs{
+    font-size: .6rem;
+  }
   .fs-xs{
     font-size: .7rem;
   }
