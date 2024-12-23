@@ -32,6 +32,7 @@ import { EditProfileComponent } from './Components/User/edit-profile/edit-profil
 import { SettingsComponent } from './Components/User/settings/settings.component';
 import { AccountComponent } from './Components/User/account/account.component';
 import { LanguagePrefrenceComponent } from './Components/shared/navbar/language-prefrence/language-prefrence.component';
+import { FloatingIconsOnSmallScreensComponent } from './Components/shared/navbar/floating-icons-on-small-screens/floating-icons-on-small-screens.component';
 
 @NgModule({
   declarations: [
@@ -65,6 +66,7 @@ import { LanguagePrefrenceComponent } from './Components/shared/navbar/language-
     SettingsComponent,
     AccountComponent,
     LanguagePrefrenceComponent,
+    FloatingIconsOnSmallScreensComponent,
   ],
   imports: [
     BrowserModule,
