@@ -1,7 +1,7 @@
-<footer class="parent-container mx-auto row g-4 justify-content-center align-items-center py-3">
+<footer class="parent-container mx-auto row g-4 justify-content-center align-items-center py-3 pb-5">
     <div class="col-lg-12  col-xxl-3">
         <div class="d-flex flex-column flex-lg-row flex-xxl-column align-items-lg-center align-items-xxl-start">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 185.04 133.4" width="200px" height="200px" class="align-self-center">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 185.04 133.4" width="180px" height="180px" class="align-self-center align-self-lg-end">
                 <defs>
                     <style>.cls-1{fill:url(#linear-gradient);}</style>
             <linearGradient id="linear-gradient" y1="66.7" x2="185.04" y2="66.7" gradientUnits="userSpaceOnUse">
@@ -28,8 +28,8 @@
                    <div class="text-center  text-sm-start ms-sm-5 ms-lg-0">
                     <h6 class="fs-5 ">GET INVOLVED</h6>
                         <ul class="list-group list-group-flush ">
-                            <li class="list-group-item">Add New Movie</li>
-                            <li class="list-group-item">Add New TV Show</li>
+                            <li class="list-group-item" [routerLink]="['/AddNewMovie']" routerLinkActive="router-link-active">Add New Movie</li>
+                            <li class="list-group-item" [routerLink]="['/AddNewShow']" routerLinkActive="router-link-active">Add New TV Show</li>
                         </ul>
                      </div>
             </div>
@@ -38,8 +38,8 @@
                     <h6 class="fs-5 ">COMMUNITY</h6>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">Guidelines</li>
-                            <li class="list-group-item">Discussions</li>
-                            <li class="list-group-item">Leaderboard</li>
+                            <li class="list-group-item" [routerLink]="['/Discussions']" routerLinkActive="router-link-active">Discussions</li>
+                            <li class="list-group-item" [routerLink]="['/LeaderBoard']" routerLinkActive="router-link-active">Leaderboard</li>
                         </ul>
                  </div>
             </div>
@@ -47,10 +47,10 @@
                    <div class="text-center text-sm-start ms-sm-5 ms-lg-0">
                     <h6 class="fs-5">LEGAL</h6>
                         <ul class="list-group list-group-flush ">
-                            <li class="list-group-item">Terms of Use</li>
-                            <li class="list-group-item">API Term of Use</li>
-                            <li class="list-group-item">Privacy Policy</li>
-                            <li class="list-group-item">DMCA Policy</li>
+                            <li class="list-group-item" [routerLink]="['/TermsOfUse']" routerLinkActive="router-link-active">Terms of Use</li>
+                            <li class="list-group-item" [routerLink]="['/APITermsOfUSE']" routerLinkActive="router-link-active">API Term of Use</li>
+                            <li class="list-group-item" [routerLink]="['/PrivacyPolicy']" routerLinkActive="router-link-active">Privacy Policy</li>
+                            <li class="list-group-item" [routerLink]="['/DMCAPolicy']" routerLinkActive="router-link-active">DMCA Policy</li>
                         </ul>
                  </div>
             </div>
