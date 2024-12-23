@@ -16,3 +16,12 @@
     left:1rem;  
     z-index:1000
 }
+.floatAddMovie{
+    position: fixed;
+    bottom:1rem;
+    left:3rem;  
+    z-index:1000
+}
+.border-blue{
+    border:3px solid var(--main-blue);
+}

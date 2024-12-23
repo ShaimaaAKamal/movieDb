@@ -9,4 +9,5 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
  logged:boolean=false;
+ smallScreen:boolean=true;
 }

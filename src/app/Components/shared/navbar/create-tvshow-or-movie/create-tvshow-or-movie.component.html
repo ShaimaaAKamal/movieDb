@@ -1,6 +1,6 @@
     <div class="btn-group">
-            <button type="button" class="btn text-white  dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="fa-solid fa-plus fa-xl fw-bolder"></i>
+            <button type="button" [ngClass]="{'text-blue px-1 py-0': smallScreen,'dropdown-toggle-split dropdown-toggle btn':true ,'text-white': !smallScreen }" data-bs-toggle="dropdown" aria-expanded="false">
+                <i [ngClass]="{'fa-solid fa-plus fw-bolder':true,'fa-lg': smallScreen,'fa-xl':!smallScreen}"></i>
             </button>
             <div class="dropdown-menu">
                 <ul  *ngIf="loggedUser ; else PleaseLoginComp" class="list-unstyled mb-0 fs-sm">
@@ -8,8 +8,8 @@
                     <li><a class="dropdown-item"  [routerLink]="['/AddNewShow']">Add New TV Show</a></li>
                 </ul>
                 <ng-template #PleaseLoginComp >
-                    <p class="mb-0">
-                        Can't find a movie or TV show? Login to create it.
+                    <p class="mb-0 fs-sm px-3 py-2">
+                        Can't find a movie or TV show? <a class="text-gray" [routerLink]="['/Login']">Login to create it.</a>
                     </p>
                 </ng-template>
             </div>

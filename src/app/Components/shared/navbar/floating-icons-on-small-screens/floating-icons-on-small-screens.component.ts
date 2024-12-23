@@ -9,4 +9,5 @@ import { Component,Input } from '@angular/core';
 })
 export class FloatingIconsOnSmallScreensComponent {
   @Input() loggedUser:boolean=false;
+  @Input() smallScreen:boolean=true;
 }
