@@ -52,6 +52,11 @@ body {
  .bg-siteDark{
   background-color: var(--bg-dark);
  }
+.btn-gray{
+  background-color: var(--main-gray);
+  color:#fff;
+  border-color: var(--main-gray) ;
+}
  .btn:hover{
   background-color: var(--main-blue);
   color:#fff;
