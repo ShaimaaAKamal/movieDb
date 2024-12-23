@@ -15,9 +15,9 @@ import { NotFoundComponent } from './Components/Errors/not-found/not-found.compo
 import { CreateTVshowOrMovieComponent } from './Components/shared/navbar/create-tvshow-or-movie/create-tvshow-or-movie.component';
 import { CreateLoginOrRehisterComponerntComponent } from './Components/shared/navbar/create-login-or-rehister-componernt/create-login-or-rehister-componernt.component';
 import { LoggedUserNavbarSectionComponent } from './Components/shared/navbar/logged-user-navbar-section/logged-user-navbar-section.component';
-import { DiscussionComponent } from './Components/MainComponets/discussion/discussion.component';
-import { LeaderboardComponent } from './Components/MainComponets/leaderboard/leaderboard.component';
-import { SupportComponent } from './Components/MainComponets/support/support.component';
+import { DiscussionComponent } from './Components/Community/discussion/discussion.component';
+import { LeaderboardComponent } from './Components/Community/leaderboard/leaderboard.component';
+import { SupportComponent } from './Components/AboutAndSupport/support/support.component';
 import { NotificationsComponent } from './Components/MainComponets/notifications/notifications.component';
 import { AddNewMovieComponent } from './Components/MoviesComponents/add-new-movie/add-new-movie.component';
 import { AddNewTVShowComponent } from './Components/TVShowsComponents/add-new-tvshow/add-new-tvshow.component';
@@ -33,6 +33,15 @@ import { SettingsComponent } from './Components/User/settings/settings.component
 import { AccountComponent } from './Components/User/account/account.component';
 import { LanguagePrefrenceComponent } from './Components/shared/navbar/language-prefrence/language-prefrence.component';
 import { FloatingIconsOnSmallScreensComponent } from './Components/shared/navbar/floating-icons-on-small-screens/floating-icons-on-small-screens.component';
+import { TermsOfUseComponent } from './Components/Legal/terms-of-use/terms-of-use.component';
+import { APITermsOfUseComponent } from './Components/Legal/apiterms-of-use/apiterms-of-use.component';
+import { PrivacyPolicyComponent } from './Components/Legal/privacy-policy/privacy-policy.component';
+import { DMCAPolicyComponent } from './Components/Legal/dmcapolicy/dmcapolicy.component';
+import { GuidelinesComponent } from './Components/Community/guidelines/guidelines.component';
+import { ContributionComponent } from './Components/Community/contribution/contribution.component';
+import { AboutComponent } from './Components/AboutAndSupport/about/about.component';
+import { ContactComponent } from './Components/AboutAndSupport/contact/contact.component';
+import { SystemStatusComponent } from './Components/MainComponets/system-status/system-status.component';
 
 @NgModule({
   declarations: [
@@ -67,6 +76,15 @@ import { FloatingIconsOnSmallScreensComponent } from './Components/shared/navbar
     AccountComponent,
     LanguagePrefrenceComponent,
     FloatingIconsOnSmallScreensComponent,
+    TermsOfUseComponent,
+    APITermsOfUseComponent,
+    PrivacyPolicyComponent,
+    DMCAPolicyComponent,
+    GuidelinesComponent,
+    ContributionComponent,
+    AboutComponent,
+    ContactComponent,
+    SystemStatusComponent,
   ],
   imports: [
     BrowserModule,
