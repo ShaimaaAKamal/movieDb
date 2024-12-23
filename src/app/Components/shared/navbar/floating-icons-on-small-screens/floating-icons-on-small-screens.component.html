@@ -3,30 +3,31 @@
                <div class="profile" *ngIf="loggedUser ; else loginRegister">
                     <a [routerLink]="['/Profile']" routerLinkActive="router-link-active">
                         <span class="fa-stack text-blue d-lg-none floatAccount" id="floatAccount">
-                            <i class="fa-regular fa-circle fa-stack-2x"></i>
+                            <i class="fa-solid fa-circle fa-stack-2x"></i>
                             <i class="fa-solid text-blue fa-sm fa-user fa-stack-1x fa-inverse"></i>
                         </span>
                     </a>
                </div>
+             
                 <span class="fa-stack text-blue floatSearch " id="floatSearch">
-                    <i class="fa-regular fa-circle fa-stack-2x"></i>
-                    <i class="fa-solid text-blue fa-sm fa-magnifying-glass fa-stack-1x fa-inverse"></i>
+                    <i class="fa-solid fa-circle fa-stack-2x"></i>
+                    <i class="fa-solid text-white fa-sm fa-magnifying-glass fa-stack-1x fa-inverse"></i>
                 </span>
-                <div class="text-blue floatAddMovie ms-2 border-blue rounded-circle">
+                <div class="text-blue floatAddMovie ms-2 border-blue bg-blue rounded-circle">
                     <app-create-tvshow-or-movie [loggedUser]="loggedUser" [smallScreen]="smallScreen"></app-create-tvshow-or-movie>  
                 </div>
                 <ng-template #loginRegister>
                       <div class="loginRegister" >
                         <a [routerLink]="['/Login']" routerLinkActive="router-link-active">
                             <span class="fa-stack text-blue floatLogin" id="floatLogin">
-                                <i class="fa-regular fa-circle fa-stack-2x"></i>
-                                <i class="fa-solid text-blue fa-sm fa-right-to-bracket fa-stack-1x fa-inverse"></i>
+                                <i class="fa-solid fa-circle fa-stack-2x"></i>
+                                <i class="fa-solid text-white fa-sm fa-right-to-bracket fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
                         <a [routerLink]="['/Register']" routerLinkActive="router-link-active">
                             <span class="fa-stack   floatSignUp" id="floatSignUp">
-                                <i class="fa-regular text-blue fa-circle fa-stack-2x"></i>
-                                <i class="fa-solid text-blue fa-sm fa-user-plus fa-stack-1x fa-inverse"></i>
+                                <i class="fa-solid text-blue fa-circle fa-stack-2x"></i>
+                                <i class="fa-solid text-white fa-sm fa-user-plus fa-stack-1x fa-inverse"></i>
                         </span>
                         </a>
                      </div>
