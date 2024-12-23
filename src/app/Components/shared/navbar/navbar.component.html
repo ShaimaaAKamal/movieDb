@@ -30,6 +30,7 @@
       </ul>
       <div class="d-flex align-items-center">
         <app-create-tvshow-or-movie [loggedUser]="logged"></app-create-tvshow-or-movie>
+        <app-language-prefrence></app-language-prefrence>
         <app-create-login-or-register *ngIf="!logged ;else profileNotification"></app-create-login-or-register>
         <ng-template #profileNotification>
           <app-logged-user-navbar></app-logged-user-navbar>

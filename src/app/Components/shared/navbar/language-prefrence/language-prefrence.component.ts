@@ -8,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrl: './language-prefrence.component.css'
 })
 export class LanguagePrefrenceComponent {
-
+  language:string="english";
+  resetLanguage(){
+    console.log('reset language');
+  }
 }
