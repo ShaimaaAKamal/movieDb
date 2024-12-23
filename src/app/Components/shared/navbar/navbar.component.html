@@ -28,7 +28,7 @@
           </ul>
         </li>
       </ul>
-      <div class="d-flex align-items-center">
+      <div class="d-none d-lg-flex align-items-center">
         <app-create-tvshow-or-movie [loggedUser]="logged"></app-create-tvshow-or-movie>
         <app-language-prefrence></app-language-prefrence>
         <app-create-login-or-register *ngIf="!logged ;else profileNotification"></app-create-login-or-register>
@@ -38,6 +38,9 @@
         <div class="ps-2">
              <i class="fa-solid fa-magnifying-glass fa-xl text-blue"></i>
         </div>        
+      </div>
+      <div class="d-lg-none">
+        <app-floating-icons-on-small-screens [loggedUser]="logged"></app-floating-icons-on-small-screens>
       </div>
     </div>
   </div>
