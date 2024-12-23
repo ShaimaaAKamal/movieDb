@@ -52,6 +52,11 @@ body {
  .bg-siteDark{
   background-color: var(--bg-dark);
  }
+ .btn:hover{
+  background-color: var(--main-blue);
+  color:#fff;
+  border-color: var(--main-blue) ;
+ }
  .fs-xxs{
     font-size: .6rem;
   }
