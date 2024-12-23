@@ -1,1 +1,3 @@
- 
+ .router-link-active{
+    color:var(--main-blue) !important;
+ }
