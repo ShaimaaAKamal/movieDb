@@ -1,0 +1,33 @@
+
+ <div id="floatingIcons">
+               <div class="profile" *ngIf="loggedUser ; else loginRegister">
+                    <a [routerLink]="['/Profile']" routerLinkActive="router-link-active">
+                        <span class="fa-stack text-blue d-lg-none floatAccount" id="floatAccount">
+                            <i class="fa-regular fa-circle fa-stack-2x"></i>
+                            <i class="fa-solid text-blue fa-sm fa-user fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
+               </div>
+                <span class="fa-stack text-blue floatSearch" id="floatSearch">
+                    <i class="fa-regular fa-circle fa-stack-2x"></i>
+                    <i class="fa-solid text-blue fa-sm fa-magnifying-glass fa-stack-1x fa-inverse"></i>
+                </span>
+                <ng-template #loginRegister>
+                      <div class="loginRegister" >
+                        <a [routerLink]="['/Login']" routerLinkActive="router-link-active">
+                            <span class="fa-stack text-blue floatLogin" id="floatLogin">
+                                <i class="fa-regular fa-circle fa-stack-2x"></i>
+                                <i class="fa-solid text-blue fa-sm fa-right-to-bracket fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                        <a [routerLink]="['/Register']" routerLinkActive="router-link-active">
+                            <span class="fa-stack text-blue e floatSignUp" id="floatSignUp">
+                                <i class="fa-regular fa-circle fa-stack-2x"></i>
+                                <i class="fa-solid text-blue fa-sm fa-user-plus fa-stack-1x fa-inverse"></i>
+                        </span>
+                        </a>
+                     </div>
+                </ng-template>
+                
+             
+        </div>

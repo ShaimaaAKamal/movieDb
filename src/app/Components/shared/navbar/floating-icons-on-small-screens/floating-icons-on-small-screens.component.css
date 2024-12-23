@@ -1,0 +1,18 @@
+.floatLogin{
+    position: fixed;
+    bottom:1rem;
+    right:3.5rem;
+    z-index:1000
+}
+.floatAccount,.floatSignUp{
+    position: fixed;
+    bottom:1rem;
+    right:1rem;
+    z-index:1000
+}
+.floatSearch{
+    position: fixed;
+    bottom:1rem;
+    left:1rem;  
+    z-index:1000
+}
