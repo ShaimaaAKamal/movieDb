@@ -42,6 +42,7 @@ import { ContributionComponent } from './Components/Community/contribution/contr
 import { AboutComponent } from './Components/AboutAndSupport/about/about.component';
 import { ContactComponent } from './Components/AboutAndSupport/contact/contact.component';
 import { SystemStatusComponent } from './Components/MainComponets/system-status/system-status.component';
+import { APIComponent } from './Components/MainComponets/api/api.component';
 
 @NgModule({
   declarations: [
@@ -85,6 +86,7 @@ import { SystemStatusComponent } from './Components/MainComponets/system-status/
     AboutComponent,
     ContactComponent,
     SystemStatusComponent,
+    APIComponent,
   ],
   imports: [
     BrowserModule,
