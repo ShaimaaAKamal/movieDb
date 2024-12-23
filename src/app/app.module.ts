@@ -43,6 +43,8 @@ import { AboutComponent } from './Components/AboutAndSupport/about/about.compone
 import { ContactComponent } from './Components/AboutAndSupport/contact/contact.component';
 import { SystemStatusComponent } from './Components/MainComponets/system-status/system-status.component';
 import { APIComponent } from './Components/MainComponets/api/api.component';
+import { ResetPasswordComponent } from './Components/Credientials/reset-password/reset-password.component';
+import { SendVerificationMailComponent } from './Components/Credientials/send-verification-mail/send-verification-mail.component';
 
 @NgModule({
   declarations: [
@@ -87,6 +89,8 @@ import { APIComponent } from './Components/MainComponets/api/api.component';
     ContactComponent,
     SystemStatusComponent,
     APIComponent,
+    ResetPasswordComponent,
+    SendVerificationMailComponent,
   ],
   imports: [
     BrowserModule,
