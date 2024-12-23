@@ -33,11 +33,18 @@ body {
     /* --bs-dropdown-min-width: ; */
   }
 
+   .router-link-active{
+    color:var(--main-blue) !important;
+ }
+
  .text-gray{
   color:var(--main-gray);
  }
  .text-blue{
-  color:var(--main-blue);
+  color:var(--main-blue) ;
+ }
+ .bg-blue{
+  background-color:var(--main-blue);
  }
  .text-white{
   color:#fff;
