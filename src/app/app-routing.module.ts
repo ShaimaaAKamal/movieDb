@@ -5,9 +5,9 @@ import { NotFoundComponent } from './Components/Errors/not-found/not-found.compo
 import { MoviesComponent } from './Components/MoviesComponents/movies/movies.component';
 import { TvShowsComponent } from './Components/TVShowsComponents/tv-shows/tv-shows.component';
 import { PeopleComponent } from './Components/MainComponets/people/people.component';
-import { DiscussionComponent } from './Components/MainComponets/discussion/discussion.component';
-import { LeaderboardComponent } from './Components/MainComponets/leaderboard/leaderboard.component';
-import { SupportComponent } from './Components/MainComponets/support/support.component';
+import { DiscussionComponent } from './Components/Community/discussion/discussion.component';
+import { LeaderboardComponent } from './Components/Community/leaderboard/leaderboard.component';
+import { SupportComponent } from './Components/AboutAndSupport/support/support.component';
 import { NotificationsComponent } from './Components/MainComponets/notifications/notifications.component';
 import { AddNewMovieComponent } from './Components/MoviesComponents/add-new-movie/add-new-movie.component';
 import { AddNewTVShowComponent } from './Components/TVShowsComponents/add-new-tvshow/add-new-tvshow.component';
@@ -21,6 +21,15 @@ import { EditProfileComponent } from './Components/User/edit-profile/edit-profil
 import { SettingsComponent } from './Components/User/settings/settings.component';
 import { LoginComponent } from './Components/Credientials/login/login.component';
 import { RegisterComponent } from './Components/Credientials/register/register.component';
+import { TermsOfUseComponent } from './Components/Legal/terms-of-use/terms-of-use.component';
+import { APITermsOfUseComponent } from './Components/Legal/apiterms-of-use/apiterms-of-use.component';
+import { PrivacyPolicyComponent } from './Components/Legal/privacy-policy/privacy-policy.component';
+import { DMCAPolicyComponent } from './Components/Legal/dmcapolicy/dmcapolicy.component';
+import { GuidelinesComponent } from './Components/Community/guidelines/guidelines.component';
+import { ContributionComponent } from './Components/Community/contribution/contribution.component';
+import { AboutComponent } from './Components/AboutAndSupport/about/about.component';
+import { ContactComponent } from './Components/AboutAndSupport/contact/contact.component';
+import { SystemStatusComponent } from './Components/MainComponets/system-status/system-status.component';
 
 const routes: Routes = [
   {path:"",redirectTo:"/home",pathMatch:"full"},
@@ -37,6 +46,15 @@ const routes: Routes = [
   {path:"Profile" , component:ProfileComponent},
    {path:"Login",component:LoginComponent},
   {path:"Register",component:RegisterComponent},
+  {path:"TermsOfUse",component:TermsOfUseComponent},
+  {path:"APITermsOfUSE",component:APITermsOfUseComponent},
+  {path:"PrivacyPolicy",component:PrivacyPolicyComponent},
+  {path:"DMCAPolicy",component:DMCAPolicyComponent},
+  {path:"Guidelines",component:GuidelinesComponent},
+  {path:"Contribution",component:ContributionComponent},
+  {path:"AboutUs",component:AboutComponent},
+  {path:"ContactUs",component:ContactComponent},
+  {path:"SystemStatus",component:SystemStatusComponent},
   {path:":userName",component:AccountComponent,children:[
     {path:"Discussions",component:UserDiscussionsComponent},
     {path:"Lists",component:UserListsComponent},
