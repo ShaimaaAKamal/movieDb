@@ -30,6 +30,7 @@ import { ContributionComponent } from './Components/Community/contribution/contr
 import { AboutComponent } from './Components/AboutAndSupport/about/about.component';
 import { ContactComponent } from './Components/AboutAndSupport/contact/contact.component';
 import { SystemStatusComponent } from './Components/MainComponets/system-status/system-status.component';
+import { APIComponent } from './Components/MainComponets/api/api.component';
 
 const routes: Routes = [
   {path:"",redirectTo:"/home",pathMatch:"full"},
@@ -55,6 +56,7 @@ const routes: Routes = [
   {path:"AboutUs",component:AboutComponent},
   {path:"ContactUs",component:ContactComponent},
   {path:"SystemStatus",component:SystemStatusComponent},
+  {path:"API",component:APIComponent},
   {path:":userName",component:AccountComponent,children:[
     {path:"Discussions",component:UserDiscussionsComponent},
     {path:"Lists",component:UserListsComponent},
