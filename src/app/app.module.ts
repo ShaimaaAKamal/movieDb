@@ -45,7 +45,9 @@ import { SystemStatusComponent } from './Components/MainComponets/system-status/
 import { APIComponent } from './Components/MainComponets/api/api.component';
 import { ResetPasswordComponent } from './Components/Credientials/reset-password/reset-password.component';
 import { SendVerificationMailComponent } from './Components/Credientials/send-verification-mail/send-verification-mail.component';
-
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { environment } from '../environments/environment';
 @NgModule({
   declarations: [
     AppComponent,
@@ -94,7 +96,9 @@ import { SendVerificationMailComponent } from './Components/Credientials/send-ve
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
