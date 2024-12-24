@@ -15,7 +15,7 @@ body {
      width:90%;
    }
    
-   .dropdown-toggle::after {
+.dropdown-toggle::after {
       display: none; 
     }
 
@@ -29,8 +29,6 @@ body {
 }
 .dropdown-menu *{
   text-wrap: nowrap;
-  /* width:  ; */
-    /* --bs-dropdown-min-width: ; */
   }
 
    .router-link-active{
