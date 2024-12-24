@@ -11,16 +11,16 @@
             <form [formGroup]="LoginForm" (ngSubmit)="Login(LoginForm)">
                 <div class="mb-3">
                     <label for="mail" class="form-label fw-light">E-Mail Address</label>
-                    <input class="form-control form-control-sm rounded" type="mail"  aria-label="email" formControlName="email" id="mail">
-                     <div class="alert alert-danger d-flex flex-column p-2 mt-1 fs-xs" *ngIf="LoginForm.get('email')?.errors && LoginForm.get('email')?.touched">
+                    <input [ngClass]="{'form-control form-control-sm rounded':true,'border-danger':LoginForm.get('email')?.errors && LoginForm.get('email')?.touched}" type="mail"  aria-label="email" formControlName="email" id="mail">
+                     <div class="text-danger  d-flex flex-column  mt-1 fs-xs" *ngIf="LoginForm.get('email')?.errors && LoginForm.get('email')?.touched">
                            <div class="d-flex align-items-center" *ngIf="LoginForm.get('email')?.getError('required')"><i class="fa-solid fa-xmark pe-1"></i><span>E-Mail is required.</span></div>
                            <div class="d-flex align-items-center" *ngIf="LoginForm.get('email')?.getError('email')"><i class="fa-solid fa-xmark pe-1"></i><span>E-Mail is invalid.</span></div>
                     </div>
                 </div>
                 <div class="mb-3">
                     <label for="password" class="form-label fw-light">Password (8 characters minimum)</label>
-                    <input class="form-control form-control-sm rounded" type="password" aria-label="Password" formControlName="password" id="password">
-                    <div class="alert alert-danger d-flex flex-column p-2 mt-1 fs-xs" *ngIf="LoginForm.get('password')?.errors && LoginForm.get('password')?.touched">
+                    <input [ngClass]="{'form-control form-control-sm rounded':true,'border-danger':LoginForm.get('password')?.errors && LoginForm.get('password')?.touched}" type="password" aria-label="Password" formControlName="password" id="password">
+                    <div class="text-danger  d-flex flex-column  mt-1 fs-xs" *ngIf="LoginForm.get('password')?.errors && LoginForm.get('password')?.touched">
                            <div class="d-flex align-items-center" *ngIf="LoginForm.get('password')?.getError('required')"><i class="fa-solid fa-xmark pe-1"></i><span>Passowrd is required.</span></div>
                            <div class="d-flex align-items-center" *ngIf="LoginForm.get('password')?.getError('pattern')"><i class="fa-solid fa-xmark pe-1"></i>
                             <span>

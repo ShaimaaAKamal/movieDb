@@ -69,3 +69,12 @@ body {
   .fs-sm{
         font-size: .8rem;
   }
+
+  .form-control:focus{
+    border-color:var(--main-blue);
+    box-shadow: none;
+  }
+
+  .border-danger{
+    border-color:#f00;
+  }
