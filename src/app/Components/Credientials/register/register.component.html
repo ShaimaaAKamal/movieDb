@@ -42,27 +42,56 @@
         <div>
                 <h4 class="fw-bold fs-4">Sign up for an account</h4>
                 <p class="">Signing up for an account is free and easy. Fill out the form below to get started. JavaScript is required to to continue.</p>
-                <form action="">
+                <form  [formGroup]="RegisterForm" (ngSubmit)="SignUP(RegisterForm)">
                     <div class="mb-3">
                         <label for="username" class="form-label fw-light">Username</label>
-                        <input class="form-control form-control-sm rounded" type="text"  aria-label="Username" name="Username" id="username">
+                        <input class="form-control form-control-sm rounded" type="text"  aria-label="Username" formControlName="username" id="username">
+                        <div class="alert alert-danger d-flex flex-column p-2 mt-1 fs-xs" *ngIf="RegisterForm.get('username')?.errors && RegisterForm.get('username')?.touched">
+                           <div class="d-flex align-items-center" *ngIf="RegisterForm.get('username')?.getError('required')"><i class="fa-solid fa-xmark pe-1"></i><span>Username is required.</span></div>
+                           <div class="d-flex align-items-center" *ngIf="RegisterForm.get('username')?.getError('minlength')"><i class="fa-solid fa-xmark pe-1"></i><span>Minimum Length is 5.</span></div>
+                           <div class="d-flex align-items-center" *ngIf="RegisterForm.get('username')?.getError('maxlength')"><i class="fa-solid fa-xmark pe-1"></i><span>Maximum Length is 30.</span></div>
+                        </div>
                     </div>
                     <div class="mb-3">
-                        <label for="password" class="form-label fw-light">Password (4 characters minimum)</label>
-                        <input class="form-control form-control-sm rounded" type="password" aria-label="Password" name="Password" id="password">
+                        <label for="password" class="form-label fw-light">Password (8 characters minimum)</label>
+                        <input class="form-control form-control-sm rounded" type="password" aria-label="Password" formControlName="password" id="password">
+                         <div class="alert alert-danger d-flex flex-column p-2 mt-1 fs-xs" *ngIf="RegisterForm.get('password')?.errors && RegisterForm.get('password')?.touched">
+                           <div class="d-flex align-items-center" *ngIf="RegisterForm.get('password')?.getError('required')"><i class="fa-solid fa-xmark pe-1"></i><span>Passowrd is required.</span></div>
+                           <div class="d-flex align-items-center" *ngIf="RegisterForm.get('password')?.getError('pattern')"><i class="fa-solid fa-xmark pe-1"></i>
+                            <span>
+                                Password must be Minimum eight characters, at least one letter, one number and one special character.
+                            </span></div>
+                        </div>
                     </div>
                     <div class="mb-3">
                         <label for="confirmPassword" class="form-label fw-light">Password Confirm</label>
-                        <input class="form-control form-control-sm rounded" type="password"  aria-label="Password Confirm" name="confirmPassword" id="confirmPassword">
+                        <input class="form-control form-control-sm rounded" type="password"  aria-label="Password Confirm" formControlName="confirmPassword" id="confirmPassword">
+                        <div class="alert alert-danger d-flex flex-column p-1 mt-2 fs-xs" *ngIf="RegisterForm.get('confirmPassword')?.errors && RegisterForm.get('confirmPassword')?.touched">
+                           <div class="d-flex align-items-center" *ngIf="RegisterForm.get('confirmPassword')?.getError('required')"><i class="fa-solid fa-xmark pe-1"></i><span>Confirm Passowrd is required.</span></div>
+                           <div class="d-flex align-items-center" *ngIf="RegisterForm.get('confirmPassword')?.getError('pattern')"><i class="fa-solid fa-xmark pe-1"></i>
+                                <span>
+                                    Password must be Minimum eight characters, at least one letter, one number and one special character.
+                                </span>
+                            </div>
+                            <div class="d-flex align-items-center" *ngIf="RegisterForm.get('confirmPassword') != RegisterForm.get('password')"><i class="fa-solid fa-xmark pe-1"></i>
+                                <span>
+                                    Passwords must match.
+                                </span>
+                            </div>
+                        </div>
                     </div>
                     <div class="mb-3">
                         <label for="mail" class="form-label fw-light">Email</label>
-                        <input class="form-control form-control-sm rounded" type="mail"  aria-label="Email" name="mail" id="mail">
+                        <input class="form-control form-control-sm rounded" type="mail"  aria-label="Email" formControlName="email" id="mail">
+                        <div class="alert alert-danger d-flex flex-column p-2 mt-1 fs-xs" *ngIf="RegisterForm.get('email')?.errors && RegisterForm.get('email')?.touched">
+                           <div class="d-flex align-items-center" *ngIf="RegisterForm.get('email')?.getError('required')"><i class="fa-solid fa-xmark pe-1"></i><span>E-Mail is required.</span></div>
+                           <div class="d-flex align-items-center" *ngIf="RegisterForm.get('email')?.getError('email')"><i class="fa-solid fa-xmark pe-1"></i><span>E-Mail is invalid.</span></div>
+                        </div>
                     </div>
                     <p class="">By clicking the "Register" button below, I certify that I have read and agree to the TMDB terms of use and privacy policy.</p>
                     <div class="d-flex align-items-center">
-                        <button type="button" class="btn btn-gray me-4">Register</button>
-                        <span class="text-blue">Cancal</span>
+                        <button type="submit" class="btn btn-gray me-4" [disabled]="RegisterForm.invalid">Register</button>
+                        <span class="text-blue" (click)="CancalRegisteration()">Cancal</span>
                     </div>
                 </form>
         </div>
