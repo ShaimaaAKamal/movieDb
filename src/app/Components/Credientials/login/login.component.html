@@ -1,24 +1,35 @@
       <div class="parent-container mx-auto py-5 px-4">
             <h4 class="fw-bold fs-4 pb-3">Login to your account</h4>
-            <p class=" ">
+            <p >
                 In order to use the editing and rating capabilities of TMDB, as well as get personal recommendations you will need to login to your account. If you do not have an account, registering for an account is free and simple.
                  <a [routerLink]="['/Register']" routerLinkActive="router-link-active">Click here</a> to get started.
             </p>
 
-            <p class="">
+            <p >
                 If you signed up but didn't get your verification email, <a [routerLink]="['/SendVerificationMail']" routerLinkActive="router-link-active">Click here</a>  to have it resent.
             </p>
-            <form action="">
+            <form [formGroup]="LoginForm" (ngSubmit)="Login(LoginForm)">
                 <div class="mb-3">
-                    <label for="username" class="form-label fw-light">Username</label>
-                    <input class="form-control form-control-sm rounded" type="text"  aria-label="Username" name="Username" id="username">
+                    <label for="mail" class="form-label fw-light">E-Mail Address</label>
+                    <input class="form-control form-control-sm rounded" type="mail"  aria-label="email" formControlName="email" id="mail">
+                     <div class="alert alert-danger d-flex flex-column p-2 mt-1 fs-xs" *ngIf="LoginForm.get('email')?.errors && LoginForm.get('email')?.touched">
+                           <div class="d-flex align-items-center" *ngIf="LoginForm.get('email')?.getError('required')"><i class="fa-solid fa-xmark pe-1"></i><span>E-Mail is required.</span></div>
+                           <div class="d-flex align-items-center" *ngIf="LoginForm.get('email')?.getError('email')"><i class="fa-solid fa-xmark pe-1"></i><span>E-Mail is invalid.</span></div>
+                    </div>
                 </div>
                 <div class="mb-3">
-                    <label for="password" class="form-label fw-light">Password (4 characters minimum)</label>
-                    <input class="form-control form-control-sm rounded" type="password" aria-label="Password" name="Password" id="password">
+                    <label for="password" class="form-label fw-light">Password (8 characters minimum)</label>
+                    <input class="form-control form-control-sm rounded" type="password" aria-label="Password" formControlName="password" id="password">
+                    <div class="alert alert-danger d-flex flex-column p-2 mt-1 fs-xs" *ngIf="LoginForm.get('password')?.errors && LoginForm.get('password')?.touched">
+                           <div class="d-flex align-items-center" *ngIf="LoginForm.get('password')?.getError('required')"><i class="fa-solid fa-xmark pe-1"></i><span>Passowrd is required.</span></div>
+                           <div class="d-flex align-items-center" *ngIf="LoginForm.get('password')?.getError('pattern')"><i class="fa-solid fa-xmark pe-1"></i>
+                            <span>
+                                Password must be Minimum eight characters, at least one letter, one number and one special character.
+                            </span></div>
+                        </div>
                 </div>
                 <div class="d-flex align-items-center">
-                    <button type="button" class="btn btn-gray me-4">Login</button>
+                    <button type="submit" class="btn btn-gray me-4" [disabled]="LoginForm.invalid">Login</button>
                     <span class="text-blue" [routerLink]="['/ResetPassword']">Reset Password</span>
                 </div>
             </form>
