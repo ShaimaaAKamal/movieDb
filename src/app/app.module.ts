@@ -49,6 +49,9 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { environment } from '../environments/environment';
 import {ReactiveFormsModule} from '@angular/forms';
+import { SideMenuComponent } from './Components/shared/side-menu/side-menu.component';
+import { SortComponent } from './Components/shared/side-menu/sort/sort.component';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 
 @NgModule({
   declarations: [
@@ -95,13 +98,16 @@ import {ReactiveFormsModule} from '@angular/forms';
     APIComponent,
     ResetPasswordComponent,
     SendVerificationMailComponent,
+    SideMenuComponent,
+    SortComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
