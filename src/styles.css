@@ -50,6 +50,9 @@ body {
  .bg-siteDark{
   background-color: var(--bg-dark);
  }
+ .bg-lightgray{
+  background-color: var(--border-color);
+ }
 .btn-gray{
   background-color: var(--main-gray);
   color:#fff;
