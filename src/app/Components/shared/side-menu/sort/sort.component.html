@@ -1,0 +1,33 @@
+
+<div class="mt-4 accordion accordion-flush shadow-lg" id="accordionFlushExample">
+  <div class="accordion-item ">
+    <h2 class="accordion-header" id="flush-headingOne">
+      <button class="accordion-button collapsed rounded fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+      Sort
+      </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse " aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+          <div>
+                    <div>
+                        <div class="pb-1 text-gray fw-light" >
+                            <label for="chooseSort">Sort Results By</label>
+                        </div>
+                        <div class="btn-group w-100 ">
+                        <button type="button"  id="sortSelect" class="btn d-flex align-items-center justify-content-between fs-sm px-2 bg-lightgray dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                          <span>{{sortSelection}}</span><i class="fa-solid fa-caret-down"></i>
+                        </button>
+
+                        <ul class="dropdown-menu">
+                          <li *ngFor="let sortOption of sortOptions">
+                            <a [ngClass]="{'dropdown-item':true,'active': sortOption === sortSelection}" (click)="sortBy(sortOption)">
+                              {{sortOption}}
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+    </div>
+  </div>
+</div>

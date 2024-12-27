@@ -1,0 +1,18 @@
+.accordion-button:focus{
+  box-shadow: none;
+  border-color:transparent;
+  background-color: transparent;
+}
+.accordion-button{
+  background-color: transparent;
+}
+
+.accordion-collapse {
+    border-top:.75px solid var(--border-color);
+}
+
+#sortSelect:focus,#sortSelect:hover{
+  background-color: var(--darkGray) !important;
+  border-color:var(--darkGray) !important;
+  color:#fff;
+}
