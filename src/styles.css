@@ -4,6 +4,7 @@
   --border-color:#DEDEDF;
   --main-blue:#06B4E4;
   --bg-dark:#032541;
+  --darkGray:darkgray;
 }
 html{
     font-size:16px;
@@ -23,7 +24,12 @@ body {
         border:none;
      }
 
-
+.dropdown-item:hover{
+  background-color:var(--darkGray);
+}
+.dropdown-item.active{
+  background-color: var(--main-blue);
+}
 .dropdown-menu[data-bs-popper]{
   left:-100%;
 }
@@ -51,7 +57,7 @@ body {
   background-color: var(--bg-dark);
  }
  .bg-lightgray{
-  background-color: var(--border-color);
+  background-color: var(--border-color) !important;
  }
 .btn-gray{
   background-color: var(--main-gray);
