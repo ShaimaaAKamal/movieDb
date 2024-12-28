@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../../../services/auth/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -9,7 +10,8 @@ import { AuthService } from '../../../services/auth/auth.service';
   styleUrl: './register.component.css'
 })
 export class RegisterComponent {
-  constructor(private __AuthService:AuthService){}
+  registerationFailed:boolean=false;
+  constructor(private __AuthService:AuthService,private __Router:Router){}
   RegisterForm:FormGroup=new FormGroup({
     username:new FormControl(null,[Validators.required,Validators.minLength(5),Validators.maxLength(30)]),
     email:new FormControl(null,[Validators.required,Validators.email]),
@@ -21,8 +23,8 @@ export class RegisterComponent {
     let userEmail:string=(RegisterForm.get('email')?.value);
     let userPassword=RegisterForm.get('password')?.value;
     this.__AuthService.signUp(userEmail,userPassword, RegisterForm.get('username')?.value).subscribe({
-      next:()=> console.log('registerted'),
-      error: (err) => console.error('Registration error:', err),
+      next:()=> {this.registerationFailed=false;this.__Router.navigate(['/Login'])} ,
+      error: () => this.registerationFailed=true
     })
   }
   CancalRegisteration(){
