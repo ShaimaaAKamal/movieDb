@@ -27,6 +27,7 @@ LoginForm:FormGroup=new FormGroup({
         this.__HelpersService.setUserDataTolocalStoarge(userData);
         this.__AuthService.token.subscribe({
           next:(token)=>{
+              this.__AuthService.user.next({...userData,token});
              this.__HelpersService.setTokenTolocalStoarge(token);
              this.__Router.navigate(['/Home']);
           }
