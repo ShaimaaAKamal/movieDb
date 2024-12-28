@@ -3,6 +3,7 @@ import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, getDocs, doc, setDoc, getDoc } from 'firebase/firestore';
 import { environment } from '../../../environments/environment';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth';
+import { BehaviorSubject, from, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -33,6 +34,10 @@ export class FirebaseService {
 
   signIn(email: string, password: string) {
     return signInWithEmailAndPassword(this.auth, email, password);
+  }
+
+  logout(): Observable<void> {
+    return from(this.auth.signOut());
   }
 
   async setUserData(uid: string, data: any) {
