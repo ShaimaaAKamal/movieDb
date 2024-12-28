@@ -33,6 +33,8 @@ import { SystemStatusComponent } from './Components/MainComponets/system-status/
 import { APIComponent } from './Components/MainComponets/api/api.component';
 import { ResetPasswordComponent } from './Components/Credientials/reset-password/reset-password.component';
 import { SendVerificationMailComponent } from './Components/Credientials/send-verification-mail/send-verification-mail.component';
+import { AuthGuard } from '../guards/auth/auth.guard';
+import { guestGuard } from '../guards/guest/guest.guard';
 
 const routes: Routes = [
   {path:"",redirectTo:"/home",pathMatch:"full"},
@@ -43,12 +45,12 @@ const routes: Routes = [
   {path:"Discussions" , component:DiscussionComponent},
   {path:"LeaderBoard" , component:LeaderboardComponent},
   {path:"Support",component:SupportComponent},
-  {path:"Notification",component:NotificationsComponent},
-  {path:"AddNewMovie",component:AddNewMovieComponent},
-  {path:"AddNewShow" , component:AddNewTVShowComponent},
-  {path:"Profile" , component:ProfileComponent},
-   {path:"Login",component:LoginComponent},
-  {path:"Register",component:RegisterComponent},
+  {path:"Notification",component:NotificationsComponent,canActivate: [AuthGuard]},
+  {path:"AddNewMovie",component:AddNewMovieComponent,canActivate: [AuthGuard]},
+  {path:"AddNewShow" , component:AddNewTVShowComponent,canActivate: [AuthGuard]},
+  {path:"Profile" , component:ProfileComponent,canActivate: [AuthGuard]},
+   {path:"Login",component:LoginComponent,canActivate: [guestGuard]},
+  {path:"Register",component:RegisterComponent,canActivate: [guestGuard]},
   {path:"TermsOfUse",component:TermsOfUseComponent},
   {path:"APITermsOfUSE",component:APITermsOfUseComponent},
   {path:"PrivacyPolicy",component:PrivacyPolicyComponent},
@@ -62,12 +64,12 @@ const routes: Routes = [
   {path:"ResetPassword",component:ResetPasswordComponent},
   {path:"SendVerificationMail",component:SendVerificationMailComponent},
   {path:":userName",component:AccountComponent,children:[
-    {path:"Discussions",component:UserDiscussionsComponent},
-    {path:"Lists",component:UserListsComponent},
-    {path:"Ratings",component:UserRatingsComponent},
-    {path:"Watchlist",component:UserWatchlistComponent},
-    {path:"EditProfile",component:EditProfileComponent},
-    {path:"Settings",component:SettingsComponent},]},
+    {path:"Discussions",component:UserDiscussionsComponent ,canActivate: [AuthGuard]},
+    {path:"Lists",component:UserListsComponent,canActivate: [AuthGuard]},
+    {path:"Ratings",component:UserRatingsComponent,canActivate: [AuthGuard]},
+    {path:"Watchlist",component:UserWatchlistComponent ,canActivate: [AuthGuard]},
+    {path:"EditProfile",component:EditProfileComponent,canActivate: [AuthGuard]},
+    {path:"Settings",component:SettingsComponent,canActivate: [AuthGuard]},]},
   {path:"**",component:NotFoundComponent}
 ];
 
