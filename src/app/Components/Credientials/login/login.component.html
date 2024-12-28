@@ -9,6 +9,7 @@
                 If you signed up but didn't get your verification email, <a [routerLink]="['/SendVerificationMail']" routerLinkActive="router-link-active">Click here</a>  to have it resent.
             </p>
             <form [formGroup]="LoginForm" (ngSubmit)="Login(LoginForm)">
+                <div class="alert alert-danger text-center py-1" *ngIf="LoginFailed">User hasn't been Logged </div>
                 <div class="mb-3">
                     <label for="mail" class="form-label fw-light">E-Mail Address</label>
                     <input [ngClass]="{'form-control form-control-sm rounded':true,'border-danger':LoginForm.get('email')?.errors && LoginForm.get('email')?.touched}" type="mail"  aria-label="email" formControlName="email" id="mail">
