@@ -45,9 +45,7 @@ import { SystemStatusComponent } from './Components/MainComponets/system-status/
 import { APIComponent } from './Components/MainComponets/api/api.component';
 import { ResetPasswordComponent } from './Components/Credientials/reset-password/reset-password.component';
 import { SendVerificationMailComponent } from './Components/Credientials/send-verification-mail/send-verification-mail.component';
-import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
-import { environment } from '../environments/environment';
 import {ReactiveFormsModule} from '@angular/forms';
 import { SideMenuComponent } from './Components/shared/side-menu/side-menu.component';
 import { SortComponent } from './Components/shared/side-menu/sort/sort.component';
@@ -105,7 +103,6 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFirestoreModule
   ],
