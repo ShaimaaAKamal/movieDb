@@ -43,6 +43,7 @@
                 <h4 class="fw-bold fs-4">Sign up for an account</h4>
                 <p class="">Signing up for an account is free and easy. Fill out the form below to get started. JavaScript is required to to continue.</p>
                 <form  [formGroup]="RegisterForm" (ngSubmit)="SignUP(RegisterForm)">
+                    <div class="alert alert-danger text-center py-1" *ngIf="registerationFailed">User hasn't been created </div>
                     <div class="mb-3">
                         <label for="username" class="form-label fw-light">Username</label>
                         <input [ngClass]="{'form-control form-control-sm rounded':true,'border-danger':RegisterForm.get('username')?.errors && RegisterForm.get('username')?.touched}" type="text"  aria-label="Username" formControlName="username" id="username">
