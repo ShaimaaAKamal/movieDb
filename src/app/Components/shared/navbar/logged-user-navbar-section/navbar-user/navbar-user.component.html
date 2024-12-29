@@ -1,26 +1,27 @@
 <div class="btn-group px-3">
             <button type="button" class="btn  dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-                <span class="userName">{{User.name.substring(0, 1)}}</span>
+                <span class="userName">{{username.substring(0, 1)}}</span>
             </button>
             <div class="dropdown-menu">
-                <div class="py-2" >
+                <div class="pt-2" >
                    <div class="px-3 pb-2 d-flex flex-column dropDownBroder" id="userName" [routerLink]="['/Profile']" >
-                     <p class="mb-0 fs-sm fw-bold" >{{User.name}}</p>
+                     <p class="mb-0 fs-sm fw-bold" >{{username}}</p>
                      <span class="fs-xs text-gray">View Profile</span>
                    </div>
                   <ul class="list-unstyled mb-0 py-2 fs-sm dropDownBroder">
-                        <li><a class="dropdown-item" [routerLink]="User.name+'/Discussions'" routerLinkActive="router-link-active">Discussions</a></li>
-                        <li><a class="dropdown-item  py-1" [routerLink]="User.name+'/Lists'" routerLinkActive="router-link-active"> Lists</a></li>
-                        <li><a class="dropdown-item " [routerLink]="User.name+'/Ratings'"routerLinkActive="router-link-active"> Ratings</a></li>
-                        <li><a class="dropdown-item " [routerLink]="User.name+'/Watchlist'" routerLinkActive="router-link-active"> Watchlist</a></li>
+                        <li><a class="dropdown-item" [routerLink]="username+'/Discussions'" routerLinkActive="router-link-active">Discussions</a></li>
+                        <li><a class="dropdown-item  py-1" [routerLink]="username+'/Lists'" routerLinkActive="router-link-active"> Lists</a></li>
+                        <li><a class="dropdown-item " [routerLink]="username+'/Ratings'"routerLinkActive="router-link-active"> Ratings</a></li>
+                        <li><a class="dropdown-item " [routerLink]="username+'/Watchlist'" routerLinkActive="router-link-active"> Watchlist</a></li>
                   </ul>  
-                  <ul class="list-unstyled py-2 fs-sm dropDownBroder">
-                        <li><a class="dropdown-item " [routerLink]="User.name+'/EditProfile'"  routerLinkActive="router-link-active">Edit Profile</a></li>
-                        <li><a class="dropdown-item  py-1" [routerLink]="User.name+'/Settings'"  routerLinkActive="router-link-active"> Settings</a></li>
+                  <ul class="list-unstyled py-2 mb-0 fs-sm dropDownBroder">
+                        <li><a class="dropdown-item " [routerLink]="username+'/EditProfile'"  routerLinkActive="router-link-active">Edit Profile</a></li>
+                        <li><a class="dropdown-item  py-1" [routerLink]="username+'/Settings'"  routerLinkActive="router-link-active"> Settings</a></li>
                   </ul> 
-                  <div class="px-3" (click)="logout()" >
-                     <p class="mb-0 fs-sm" >Logout</p>
-                   </div>  
+                   <ul class="list-unstyled mb-0 pt-1 fs-sm">
+                        <li><a class="dropdown-item " (click)="logout()">Logout</a></li>
+                  </ul> 
+                
                 </div>
             </div>
 </div>
