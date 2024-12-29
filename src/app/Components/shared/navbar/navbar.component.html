@@ -35,7 +35,7 @@
         <app-language-prefrence></app-language-prefrence>
         <app-create-login-or-register *ngIf="!logged ;else profileNotification"></app-create-login-or-register>
         <ng-template #profileNotification>
-          <app-logged-user-navbar></app-logged-user-navbar>
+          <app-logged-user-navbar ></app-logged-user-navbar>
         </ng-template>
         <div class="ps-2">
              <i class="fa-solid fa-magnifying-glass fa-xl text-blue"></i>
