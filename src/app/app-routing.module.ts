@@ -37,7 +37,7 @@ import { AuthGuard } from '../guards/auth/auth.guard';
 import { guestGuard } from '../guards/guest/guest.guard';
 
 const routes: Routes = [
-  {path:"",redirectTo:"/home",pathMatch:"full"},
+  {path:"",redirectTo:"/Home",pathMatch:"full"},
   {path:"Home",component:HomeComponent},
   {path:"Movies",component:MoviesComponent},
   {path:"TVShows",component:TvShowsComponent},
