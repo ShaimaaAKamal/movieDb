@@ -10,11 +10,17 @@ import { HelpersService } from '../helpers/helpers.service';
   providedIn: 'root',
 })
 export class AuthService {
-  token=new BehaviorSubject('');
-  user:any=new BehaviorSubject(null);
-  constructor(private firebaseService: FirebaseService,private __Router:Router,private __Helpers:HelpersService) {
-    this.user.next(this.__Helpers.getUserDataFromlocalStoarge());
+  token = new BehaviorSubject('');
+  user: any;
+  constructor(
+    private firebaseService: FirebaseService,
+    private __Router: Router,
+    private __Helpers: HelpersService
+  ) {
+    const userData:User|null =this.__Helpers.getUserDataFromLocalStorage();
+    this.user = new BehaviorSubject(userData ? userData : null);
   }
+
 
   signUp(email: string, password: string, username: string): Observable<void> {
     return from(this.firebaseService.signUp(email, password)).pipe(
