@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../../../../../services/auth/auth.service';
+import { User } from '../../../../../interfaces/user';
 
 @Component({
   selector: 'app-navbar-user',
@@ -7,8 +9,20 @@ import { Component } from '@angular/core';
   styleUrl: './navbar-user.component.css'
 })
 export class NavbarUserComponent {
-User:any={name:"shaimaaAkamal"};
+  username:string='unknown';
+  constructor(private __AuthService:AuthService){
+     this.__AuthService.user.subscribe({
+        next:(user:any)=> {
+        if(user) {
+            this.username=user['username'] }
+       else this.username='unknown';
+
+          },
+    })
+  }
+
+
 logout(){
-  console.log('logout');
+  this.__AuthService.Logout();
 }
 }
