@@ -10,7 +10,7 @@
     padding:.2rem .8rem .3rem;
 }
 
-#userName{
+#userName,.userName{
     text-transform: capitalize;
 }
 
