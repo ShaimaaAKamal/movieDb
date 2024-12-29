@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { User } from 'firebase/auth';
+import { User } from '../../interfaces/user';
 
 @Injectable({
   providedIn: 'root'
@@ -21,8 +21,12 @@ export class HelpersService {
   
   }
 
-  getUserDataFromlocalStoarge():User{
-    return JSON.parse(JSON.stringify(localStorage.getItem('userData')));
+   getUserDataFromLocalStorage(): User | null {
+    const userData = localStorage.getItem('userData');
+    if (userData !== null) {
+      return JSON.parse(userData);
+    }
+    return null;
   }
 
 
