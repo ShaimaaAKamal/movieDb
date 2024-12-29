@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-logged-user-navbar',
   standalone: false,
@@ -9,4 +10,5 @@ import { Component } from '@angular/core';
 })
 export class LoggedUserNavbarSectionComponent {
   NoOfNotifications:Number=0;
+
 }
